@@ -38,8 +38,8 @@ Vagrant.configure("2") do |config|
 	  web.vm.network "private_network" , type: "dhcp"
 	  web.vm.network "forwarded_port" , guest: 80, host: 8080
 	  web.vm.provision "puppet" do |puppet|
-		  puppet.manifests_path = "manifest"
-		  puppet.manifests_file = "default.pp"
+		  puppet.manifests_path = "manifests"
+		  puppet.manifest_file = "default.pp"
 
 	  end 
   end
